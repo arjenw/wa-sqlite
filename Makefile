@@ -188,6 +188,7 @@ dist/wa-sqlite.mjs: $(OBJ_FILES_DIST) $(EXPORTED_FUNCTIONS) $(EXPORTED_RUNTIME_M
 	  $(EMFLAGS_INTERFACES) \
 	  $(EMFLAGS_LIBRARIES) \
 	  $(OBJ_FILES_DIST) -o $@
+	cp extra/* dist
 
 dist/wa-sqlite-async.mjs: $(OBJ_FILES_DIST) $(EXPORTED_FUNCTIONS) $(EXPORTED_RUNTIME_METHODS) $(ASYNCIFY_IMPORTS)
 	mkdir -p dist
@@ -196,3 +197,4 @@ dist/wa-sqlite-async.mjs: $(OBJ_FILES_DIST) $(EXPORTED_FUNCTIONS) $(EXPORTED_RUN
 	  $(EMFLAGS_LIBRARIES) \
 	  $(EMFLAGS_ASYNCIFY_DIST) \
 	  $(OBJ_FILES_DIST) -o $@
+	cp extra/* dist
